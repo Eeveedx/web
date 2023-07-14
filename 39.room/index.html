@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>室内演示</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+	<style>
+		body {
+			margin: 0;
+			overflow: hidden;
+			padding: 0;
+		} 
+		canvas {
+			display: block;
+		}
+
+		.loading {
+			position: absolute;
+
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		.loadingimg {
+			position: relative;
+			width: 49px;
+			height: 49px;
+			left: 0%;
+		}
+
+		.loadingb {
+			position: absolute;
+			width: 49px;
+			height: 49px;
+		}
+
+		.loadingf {
+			position: absolute;
+			width: 24px;
+			height: 24px;
+
+			left: 50%;
+
+			transform-origin: left bottom;
+
+			animation: rotLoading 3s infinite linear;
+		}
+
+		@keyframes rotLoading {
+			0% {
+				transform: rotate(0deg);
+			}
+
+			100% {
+				transform: rotate(360deg);
+			}
+		}
+
+		@font-face {
+
+			font-family: 'ProximaNova';
+
+			src: url('fonts/proximanova.ttf');
+		}
+
+		#loadingt {
+			position: absolute;
+			font-family: "ProximaNova";
+			margin-top: 10px;
+			margin-left: -16px;
+		}
+
+		
+		@font-face {
+
+		font-family: 'ProximaNova';
+
+		src: url('fonts/proximanova.ttf');
+		}
+
+		.footer-btn{
+			text-align: center;
+			position: absolute;
+			bottom: 40px;
+			left: 90px;
+			right: 0;
+			z-index: 9999;
+			display: none;
+		}
+
+		.footer-btn .icon {
+			display: inline-block;
+			width: 40px;
+			height: 40px;
+			cursor: pointer;
+			margin: 0 12px;
+		}
+
+		.footer-btn .footer-btntex {
+			position: relative;
+			left: -62.5px;
+			top: 18px;
+			text-align: center;
+			user-select: none;
+		}
+
+		.footer-btn .icon-rule.selected{
+			fill: #806B5A;
+		}
+		.footer-btn .icon-rule.selected circle{
+			fill: #806B5A;
+			fill-opacity: 1
+		}
+	</style>
+</head>
+
+<body>
+	<div id="container" style="visibility:hidden;"></div>
+
+	<div class="footer-btn" id="btnList" style="visibility:hidden;">
+		
+		<svg width="60" height="60" class="icon icon-rule " id="overAllBtn" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<circle cx="30" cy="30" r="30" fill="black" fill-opacity="0.6"/>
+		<defs><rect id="path_0" x="0" y="0" width="48" height="48" /></defs><g opacity="1" transform="translate(9 7)  rotate(0 24 24)"><mask id="bg-mask-0" fill="white"><use xlink:href="#path_0"></use></mask><g mask="url(#bg-mask-0)" ><g opacity="1" transform="translate(0 0)  rotate(0 0.5 0.5)"></g><g opacity="1" transform="translate(4 8.925135850906372)  rotate(0 17 12.015932083129883)"><path id="分组 1" fill-rule="evenodd" style="fill:#ffffff" transform="translate(0 0)  rotate(0 17 12.015932083129883)" opacity="1" d="M0 24.0311L2 24.0311L2 5.03111C2 3.66111 2.52 2.03111 5 2.03111L29 2.03111C31.48 2.03111 32 3.66111 32 5.03111L32 24.0311L34 24.0311L34 5.03111C34 2.61111 32.69 0.0311109 29 0.0311109L19.32 0.0311109C13 -0.0388891 8.83 0.0311109 8.5 0.0311109L5 0.0311109C1.31 0.0311109 0 2.61111 0 5.03111L0 24.0311Z M29 24.0319L29 5.03186L18 5.03186L18 24.0319L20 24.0319L20 7.03186L27 7.03186L27 24.0319L29 24.0319Z M15 15.0319L15 5.03186L5 5.03186L5 15.0319L15 15.0319Z M7 13.0319L13 13.0319L13 7.03186L7 7.03186L7 13.0319Z M22.71 13.325C22.61 13.235 22.51 13.165 22.38 13.115C22.02 12.955 21.57 13.055 21.29 13.325C21.2 13.425 21.13 13.535 21.08 13.655C21.02 13.775 21 13.905 21 14.035C21 14.295 21.11 14.555 21.29 14.745C21.34 14.785 21.39 14.835 21.44 14.865C21.5 14.905 21.56 14.935 21.62 14.955C21.68 14.985 21.74 15.005 21.8 15.015C21.87 15.025 21.93 15.035 22 15.035C22.26 15.035 22.52 14.925 22.71 14.745C22.89 14.555 23 14.295 23 14.035C23 13.905 22.97 13.775 22.92 13.655C22.87 13.535 22.8 13.425 22.71 13.325Z " /></g><path id="矩形 1" fill-rule="evenodd" style="fill:#fff" transform="translate(3 34)  rotate(0 18 1)" opacity="1" d="M0,2L36,2L36,0L0,0L0,2Z " /><path id="矩形 2" fill-rule="evenodd" style="fill:#fff" transform="translate(39 32)  rotate(0 1 2)" opacity="1" d="M0,4L2,4L2,0L0,0L0,4Z " /><path id="矩形 1" fill-rule="evenodd" style="fill:#fff" transform="translate(1 32)  rotate(0 1 2)" opacity="1" d="M0,4L2,4L2,0L0,0L0,4Z " /></g></g>
+			<span class="footer-btntex">全局观看</span>
+		</svg>
+			<svg width="60" height="60" class="icon icon-rule " id="inMoveBtn" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<circle cx="30" cy="30" r="30" fill="black" fill-opacity="0.6"/>
+			<defs><rect id="path_0" x="0" y="0" width="48" height="48" /></defs><g opacity="1" transform="translate(6 5.5)  rotate(0 24 24)"><mask id="bg-mask-0" fill="white"><use xlink:href="#path_0"></use></mask><g mask="url(#bg-mask-0)" ><g opacity="1" transform="translate(0 0)  rotate(0 0.5 0.5)"></g><g opacity="1" transform="translate(8 4)  rotate(0 16 20)"><path id="分组 1" fill-rule="evenodd" style="fill:#fff" transform="translate(0 0)  rotate(0 16 20)" opacity="1" d="M9.22 21.52L10.83 32L9 32L9 40L23 40L23 32L21.17 32L22.78 21.52C23.02 21.61 23.26 21.7 23.5 21.78C25.63 22.57 27.64 23.31 28.01 25.14L30 39.07L30 40L32 40L32 39L29.98 24.8C29.38 21.82 26.62 20.8 24.19 19.91C21.79 19.02 20.26 18.38 20.08 16.78C20.84 15.73 21.32 14.02 21.5 13.27C22.79 11.89 23.1 10.27 22.35 8.82C22.34 2.55 22.03 0 16 0C11 0 9.93 1.77 9.71 5.96C8.64 6.34 7.96 6.69 7.88 6.74L8.83 8.5C8.84 8.49 9.15 8.33 9.65 8.12C9.65 8.35 9.65 8.58 9.65 8.82C9.23 9.61 8.68 11.35 10.5 13.27C10.69 14.02 11.16 15.73 11.92 16.78C11.74 18.38 10.21 19.02 7.81 19.91C5.38 20.8 2.62 21.82 2.01 24.86L0.01 38.86L0 40L2 40L2 39.07L3.98 25.2C4.36 23.31 6.37 22.57 8.5 21.78C8.74 21.7 8.98 21.61 9.22 21.52Z M11.749 5.38C14.059 4.88 17.129 4.71 20.299 6.01C20.099 2.35 19.279 2 15.999 2C12.929 2 12.009 2.32 11.749 5.38Z M20.3552 9.09097C20.3552 8.79097 20.3552 8.51097 20.3452 8.23097C17.1452 6.62097 13.8852 6.90097 11.6552 7.47097C11.6552 7.97097 11.6452 8.49097 11.6452 9.09097L11.6452 9.39097L11.4852 9.64097C11.0052 10.361 11.2252 11.191 12.1052 12.041L12.3252 12.251L12.3852 12.551C12.6152 13.571 13.1552 15.231 13.6552 15.741L13.9452 16.031L13.9452 16.441C13.9452 17.461 13.6652 18.271 13.2152 18.931L15.8452 21.001L16.1552 21.001L18.7852 18.931C18.3352 18.271 18.0552 17.461 18.0552 16.441L18.0552 16.031L18.3452 15.741C18.8452 15.231 19.3852 13.571 19.6152 12.551L19.6752 12.251L19.8952 12.041C20.7752 11.201 20.9752 10.381 20.5052 9.62097L20.3552 9.37097L20.3552 9.09097Z M16 34C14.9 34 14 34.9 14 36C14 37.1 14.9 38 16 38C17.1 38 18 37.1 18 36C18 34.9 17.1 34 16 34Z M11 38L12.56 38C12.21 37.41 12 36.73 12 36C12 35.27 12.21 34.59 12.56 34L11 34L11 38Z M21.0038 34L19.4438 34C19.7838 34.59 20.0038 35.27 20.0038 36C20.0038 36.73 19.7838 37.41 19.4438 38L21.0038 38L21.0038 34Z M16.9969 31.9959L19.1469 31.9959L20.8869 20.6859C20.6669 20.5659 20.4569 20.4459 20.2569 20.3159L16.8469 22.9959L15.1569 22.9959L11.7469 20.3159C11.5469 20.4459 11.3369 20.5659 11.1169 20.6859L12.8569 31.9959L14.9969 31.9959L14.9969 30.9959L16.9969 30.9959L16.9969 31.9959Z " /></g><g opacity="1" transform="translate(0 0)  rotate(0 0.5 0.5)"></g><g opacity="1" transform="translate(0 0)  rotate(0 0.5 0.5)"></g><g opacity="1" transform="translate(0 0)  rotate(0 0.5 0.5)"></g><g opacity="1" transform="translate(0 0)  rotate(0 0.5 0.5)"></g><g opacity="1" transform="translate(0 0)  rotate(0 0.5 0.5)"></g><g opacity="1" transform="translate(0 0)  rotate(0 0.5 0.5)"></g><g opacity="1" transform="translate(0 0)  rotate(0 0.5 0.5)"></g><g opacity="1" transform="translate(0 0)  rotate(0 0.5 0.5)"></g><g opacity="1" transform="translate(0 0)  rotate(0 0.5 0.5)"></g><g opacity="1" transform="translate(0 0)  rotate(0 0.5 0.5)"></g><g opacity="1" transform="translate(0 0)  rotate(0 0.5 0.5)"></g><g opacity="1" transform="translate(0 0)  rotate(0 0.5 0.5)"></g><g opacity="1" transform="translate(0 0)  rotate(0 0.5 0.5)"></g><g opacity="1" transform="translate(0 0)  rotate(0 0.5 0.5)"></g><g opacity="1" transform="translate(0 0)  rotate(0 0.5 0.5)"></g></g></g>
+				<span class="footer-btntex">沉浸游览</span>
+		</svg>
+	</div>
+
+	<div class="loading" id="loading" >
+		<div class="loadingimg">
+
+			<svg class="loadingb" width="76" height="76" viewBox="0 0 66 66" fill="none"
+				xmlns="http://www.w3.org/2000/svg">
+				<path
+					d="M62 33C62 36.8083 61.2499 40.5794 59.7925 44.0978C58.3351 47.6163 56.199 50.8132 53.5061 53.5061C50.8132 56.199 47.6163 58.3351 44.0978 59.7925C40.5794 61.2499 36.8083 62 33 62C29.1917 62 25.4206 61.2499 21.9022 59.7925C18.3837 58.3351 15.1868 56.199 12.4939 53.5061C9.801 50.8132 7.66488 47.6163 6.20749 44.0978C4.7501 40.5794 4 36.8083 4 33C4 29.1917 4.75011 25.4206 6.2075 21.9022C7.66489 18.3837 9.80101 15.1868 12.4939 12.4939C15.1868 9.801 18.3837 7.66487 21.9022 6.20749C25.4206 4.7501 29.1917 4 33 4C36.8083 4 40.5794 4.75011 44.0978 6.2075C47.6163 7.66489 50.8132 9.80101 53.5061 12.4939C56.199 15.1868 58.3351 18.3838 59.7925 21.9022C61.2499 25.4206 62 29.1917 62 33L62 33Z"
+					stroke="#F2F0EF" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
+			</svg>
+			<svg class="loadingf" width="37" height="37" viewBox="0 0 37 37" fill="none"
+				xmlns="http://www.w3.org/2000/svg">
+				<path
+					d="M4 4C7.80834 4 11.5794 4.75011 15.0978 6.20749C18.6163 7.66488 21.8132 9.80101 24.5061 12.4939C27.199 15.1868 29.3351 18.3837 30.7925 21.9022C32.2499 25.4206 33 29.1917 33 33"
+					stroke="#806B5A" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
+			</svg>
+		</div>
+		<p id="loadingt">Loading...</p>
+	</div>
+
+	<video id="video" playsinline webkit-playsinline muted autoplay preload loop playsinline width="320" height="240" src="./videos/vedio3.mp4" style="display: none;"></video>
+	<script type="module" src="main.js"></script>
+</body>
+
+</html>
