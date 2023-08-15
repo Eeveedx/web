@@ -1,0 +1,178 @@
+{
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 347,
+      "type": "VEC3",
+      "max": [
+        50.445526123046875,
+        112.59048461914063,
+        6.8272514343261719
+      ],
+      "min": [
+        -56.369216918945313,
+        -18.870500564575195,
+        6.2211151123046875
+      ]
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 347,
+      "type": "VEC3",
+      "max": [
+        7.9584765444451477E-07,
+        4.1738508116395678E-06,
+        -1.0
+      ],
+      "min": [
+        -5.2359628170961514E-06,
+        -3.1876263619778911E-06,
+        -1.0
+      ]
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 347,
+      "type": "VEC4",
+      "max": [
+        1.0,
+        0.99748033285140991,
+        0.0,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -0.99996805191040039,
+        0.0,
+        -1.0
+      ]
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 347,
+      "type": "VEC2",
+      "max": [
+        9.6953697204589844,
+        9.6953678131103516
+      ],
+      "min": [
+        -8.695368766784668,
+        -8.6953697204589844
+      ]
+    },
+    {
+      "bufferView": 4,
+      "componentType": 5125,
+      "count": 861,
+      "type": "SCALAR",
+      "max": [
+        346.0
+      ],
+      "min": [
+        0.0
+      ]
+    }
+  ],
+  "asset": {
+    "generator": "Plattar UnityGLTF (2021.1.0a2)",
+    "version": "2.0"
+  },
+  "buffers": [
+    {
+      "uri": "shui.bin",
+      "byteLength": 20100
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 4164
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 4164,
+      "byteLength": 4164
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 8328,
+      "byteLength": 5552
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 13880,
+      "byteLength": 2776
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 16656,
+      "byteLength": 3444
+    }
+  ],
+  "materials": [
+    {
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.46647656,
+          0.6768209,
+          0.707555532,
+          1.0
+        ],
+        "metallicFactor": 0.0
+      },
+      "name": "Material #2141403615"
+    }
+  ],
+  "meshes": [
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 4,
+          "material": 0
+        }
+      ],
+      "name": "shui"
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0,
+      "rotation": [
+        5.3385083E-08,
+        0.7071068,
+        -0.7071068,
+        5.3385083E-08
+      ],
+      "scale": [
+        1.00000048,
+        1.00000024,
+        1.00000024
+      ],
+      "translation": [
+        94.23579,
+        -8.582004,
+        225.241165
+      ],
+      "name": "shui"
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "nodes": [
+        0
+      ],
+      "name": "shui"
+    }
+  ]
+}
